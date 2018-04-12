@@ -1,15 +1,16 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Item} from '../../entities/item.entities';
-import {ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from '../../services/product.service';
-import {Product} from '../../entities/product.entities';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   moduleId: module.id,
-  templateUrl: 'index.component.html',
+  templateUrl: './deliver.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent implements  OnInit {
+export class DeliverComponent {
+  stateData = ['Mumbai', 'Delhi', 'UP', 'MP', 'Bihar'];
+  // cart page
   public items: Item[] = [];
   public total: number = 0;
   // count: number =0;
@@ -25,7 +26,7 @@ export class CartComponent implements  OnInit {
       var id = param['id'];
       console.log(id);
       if (id) {
-         var item = {
+        var item = {
           product: this.productService.find(id),
           quantity: 1
         };
@@ -140,7 +141,8 @@ export class CartComponent implements  OnInit {
     localStorage.setItem('cart', JSON.stringify(cart));
     this.loadCart();
   }
-  checkProceed() {
-    this.router.navigate(['/deliver']);
+// end of cart page
+  onPay() {
+    this.router.navigate(['/payment']);
   }
 }
