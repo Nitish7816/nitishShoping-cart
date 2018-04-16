@@ -6,9 +6,10 @@ export class ProductService {
   private products: Product[];
   constructor() {
     this.products = [
-      {id: 'p4', name: 'Apple', price: 20, photo: 'apple.jpg'},
-      {id: 'p2', name: 'orange', price: 21, photo: 'orange.jpg'},
-      {id: 'p3', name: 'grapes', price: 22, photo: 'grapes.jpg'},
+      {id: '700', name: 'Box', price: 110, photo: '700.jpg'},
+      {id: '01914', name: 'Box', price: 110, photo: '01914.jpg'},
+      {id: 'H712', name: 'Box', price: 110, photo: 'H712.jpg'},
+      {id: 'H783', name: 'Box', price: 110, photo: 'H783.jpg'},
     ];
   }
   findAll(): Product[] {
