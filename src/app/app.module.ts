@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import {DeliverComponent} from './components/cart/deliver.component';
 import {PaymentComponent} from './components/payment/payment.component';
 import {InternetBankingComponent} from './components/payment/internet-banking';
+import {HeaderComponent} from './components/home/header.component';
+import {FooterComponent} from './components/home/footer.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {InternetBankingComponent} from './components/payment/internet-banking';
     ProductComponent,
     DeliverComponent,
     PaymentComponent,
-    InternetBankingComponent
+    InternetBankingComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
