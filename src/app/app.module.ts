@@ -17,6 +17,7 @@ import {AboutComponent} from './components/home/about.component';
 import { StoreComponent} from './components/home/store.component';
 import {LiraProductComponent} from './components/product/lira-product';
 import {HomeComponent} from './components/home/home.component';
+import {SlickModule} from 'ngx-slick';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {HomeComponent} from './components/home/home.component';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    SlickModule.forRoot()
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
