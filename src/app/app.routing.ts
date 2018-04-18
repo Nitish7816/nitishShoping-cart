@@ -5,6 +5,11 @@ import {ProductComponent} from './components/product/product.component';
 import {DeliverComponent} from './components/cart/deliver.component';
 import {PaymentComponent} from './components/payment/payment.component';
 import {InternetBankingComponent} from './components/payment/internet-banking';
+import {AboutComponent} from './components/home/about.component';
+import {StoreComponent} from './components/home/store.component';
+import {LiraProductComponent} from './components/product/lira-product';
+import {HomeComponent} from './components/home/home.component';
+
 
 export const routes: Routes = [
   // {
@@ -15,10 +20,7 @@ export const routes: Routes = [
     path: 'cart',
     component: CartComponent
   },
-  {
-    path: 'products',
-    component: ProductComponent
-  },
+
   {
     path: 'deliver',
     component: DeliverComponent
@@ -26,6 +28,28 @@ export const routes: Routes = [
   {
     path: 'payment',
     component: PaymentComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'store',
+    component: StoreComponent,
+    children: [
+      {
+        path: 'product',
+        component: ProductComponent
+      },
+      {
+        path: 'lira-product',
+        component: LiraProductComponent
+      },
+    ]
   },
   {
     path: 'ib',

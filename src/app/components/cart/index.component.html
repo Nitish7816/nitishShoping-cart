@@ -21,9 +21,9 @@
     </td>
     <td>{{item.product.price}}</td>
     <td>
+      <button (click)="decrement(item.product.id)">-</button>
       {{item.quantity}}
       <button (click)="increment(item.product.id)">+</button>
-      <button (click)="decrement(item.product.id)">-</button>
     </td>
     <td>{{item.product.price * item.quantity}}</td>
   </tr>

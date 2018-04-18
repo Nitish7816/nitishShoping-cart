@@ -13,6 +13,10 @@ import {PaymentComponent} from './components/payment/payment.component';
 import {InternetBankingComponent} from './components/payment/internet-banking';
 import {HeaderComponent} from './components/home/header.component';
 import {FooterComponent} from './components/home/footer.component';
+import {AboutComponent} from './components/home/about.component';
+import { StoreComponent} from './components/home/store.component';
+import {LiraProductComponent} from './components/product/lira-product';
+import {HomeComponent} from './components/home/home.component';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import {FooterComponent} from './components/home/footer.component';
     PaymentComponent,
     InternetBankingComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    StoreComponent,
+    LiraProductComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
