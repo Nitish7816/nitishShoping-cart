@@ -18,6 +18,7 @@ import { StoreComponent} from './components/home/store.component';
 import {LiraProductComponent} from './components/product/lira-product';
 import {HomeComponent} from './components/home/home.component';
 import {SlickModule} from 'ngx-slick';
+import {LiraService} from './services/lira.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import {SlickModule} from 'ngx-slick';
     RouterModule.forRoot(routes),
     SlickModule.forRoot()
   ],
-  providers: [ProductService],
+  providers: [ProductService, LiraService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
